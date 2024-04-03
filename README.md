@@ -1,4 +1,4 @@
-# this is study-book desu
+this is study-book desu
 
 
 # 시간 복잡도
