@@ -2,7 +2,6 @@
   "name": "javascript",
   "version": "1.0.0",
   "main": "main.js",
-  "devDependencies": {},
   "scripts": {
     "start": "nodemon --watch ./ main.js"
   },

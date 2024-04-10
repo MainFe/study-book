@@ -1,56 +1,54 @@
 const { fibonacci, isPowerOfTwo, isPowerOfBitWise, linearSearch, binarySearch, bubbleSort, insertionSort, recursiveBinarySearch, quickSort } = require('./src/module')
 
-// console.log(linearSearch([1, 2, 3, 4, 5], 5));
-// console.log(binarySearch([1, 5, 6, 10, 340, 511], 511));
+// const getSomeThing = () => {
+//   return new Promise((resolve, reject) => {
+//     // fetch something
+//     resolve('some data');
+//     reject('some error');
+//   });
+// }
 
-// const words = ['ab', 'bddd', 'c', 'd', 'e']
+// getSomeThing().then((data) => {
+//   console.log(data);
+// }, (err) => {
+//   console.log(err);
+// })
 
-function timer(time) {
-  return new Promise(function (resolve) {
-    setTimeout(function() {
-      resolve(time);
-    }, time);
-  });
+// 이를 작성하는 다른 방법!
+// const re = getSomeThing().then(data => {
+//   console.log(data);
+//   return 'fucking return!';
+// }).then(date => {
+//   console.log('hey~~', date);
+// }).catch(err => {
+//   console.error('Error 발생!: ', err);
+// })
+
+// console.log(re);
+// 오류 작성시 어떻게 대처??
+
+const sqlCreate = async () => {
+  const re = await sqlDelete();
+
+  if(re.status !== 200) {
+    throw new Error("hdfashfsd");
+  }
 }
 
-// async function run() {
-//   console.log('start')
-//   let time = await timer(1000);
-//   console.log('time: ', time);
-//   time = await timer(time+1000);
-//   console.log('time: ', time);
-//   time = await timer(time+1000);
-//   console.log('time: ', time);
-//   console.log('end');
-// }
-// console.log(1);
-// async () => await run();
-// console.log(2);
+const sqlDelete = () => {
+  return new Promise((resolve, reject) => {
+    reject('sqlDelete Fail');
+    resolve('sqlDelete Access');
+  })
+}
 
-// console.log(myfilter(words, element => element.length > 1));
+const sqlite3 = async () => {
+  const as = await sqlCreate()
+  console.log(as);
+}
 
-let hey = new Promise((resolve, reject) => {
-  setTimeout(function() {
-    resolve('he')
-  }, 2000)
-});
-let hey2 = new Promise((resolve, reject) => {
-  setTimeout(function() {
-    resolve('he2')
-  }, 2000)
-});
-// hey.then((data) => {
-//   console.log('data', data);
-//   hey2.then(function(data) {
-//     console.log('data2', data)
-//   })
-// })
-// Promise.all([timer(1000), timer(2000), timer(3000)]).then(function(result) {
-//   console.log('result', result);
-//   console.timeEnd('Promise.all')
-// })
+sqlDelete()
+  .then(result => console.log(result))
+  .catch(err => console.log(err))
 
-Promise.race([timer(1000), timer(2000), timer(3000)]).then(function(result) {
-  console.log('result', result);
-  console.timeEnd('Promise.race')
-})
+// 리턴으로 주고싶다면, async으로, 체이닝을 하고 싶다면, Promise로 해라!! 라는 느까ㅣㅁ쓰??
