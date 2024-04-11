@@ -39,3 +39,10 @@ module.exports = {
   dbConnect, dbClose, 
   createMemo,  searchMemo, updateMemo, deleteMemo,
 }
+
+const { contextBridge } = require("electron")
+const personDB = require("./Database/PersonManager")
+
+contextBridge.exposeInMainWorld("sqlite", {
+  personDB,
+})
