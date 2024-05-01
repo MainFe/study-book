@@ -1,0 +1,33 @@
+REM BASIC Example Program
+REM Input: An integer, listlen, where listlen is less
+REM        than 100, followed by listlen-integer values
+REM Ouput: The number of input values that are greater
+REM        than the average of all input values
+
+  DIM intlist(99)
+  result = 0
+  sum = 0
+  INPUT listlen
+  IF listlen > 0 AND listlen < 100 THEN
+
+REM   Read input into an array and compute the sum
+    FOR counter = 1 TO listlen
+      INPUT intlist(counter)
+      sum = sum + intlist(counter)
+    NEXT counter
+
+REM   Compute the average
+    average = sum / listlen
+
+REM   Count the number of input values that are > average
+    FOR counter = 1 TO listlen
+      IF intlist(counter) > average
+        THEN result = result + 1
+    NEXT counter
+
+REM   Print the result
+    PRINT "The number of values that are > average is"; result
+  ELSE
+    PRINT "Error-input list length is not legal"
+  END IF
+END

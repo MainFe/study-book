@@ -1,0 +1,34 @@
+{ Pascal Example Program
+Input: An integer, listlen, where listlen is less
+       than 100, followed by listlen-integer values
+Output: the number of input values that are greater
+       than the average of all input values }
+program pasex (input, ouput);
+  type intlisttype = array [1..99] of integer;
+  var
+    intlist : intlisttype;
+    listlen, counter, sum, average, result : integer;
+  begin
+  result := 0;
+  sum := 0;
+  readln (listlen);
+  if ((listlen > 0) and (listlen < 100)) then
+  begin
+{ Read input into an array and compute the sum }
+    for counter := 1 to listlen do
+    begin
+      readIn (intlist[counter]);
+      sum := sum + intlist[counter]
+    end;
+{ Compute the average }
+    average := sum / listlen;
+{ Count the number of input values that are > average }
+    for counter := 1 to listlen do
+      if (intlist[counter] > average) then
+        result := result + 1;
+{ Print the result }
+    writeln ('The number of values > average is:', result)
+  end { of the then clause of if (( listlen > 0 ... }
+  else
+    writeln ('Error-input list length is not legal')
+end. 
