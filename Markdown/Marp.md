@@ -3,7 +3,7 @@ marp: true
 # theme: gaia
 # theme: uncover
 # class: invert
-# paginate: true
+paginate: true
 header: I'm really happy _you_ are here.
 footer: Copyright 2023. **Don't** copy me.
 ---

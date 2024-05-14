@@ -1,5 +1,6 @@
 ---
 marp: true
+paginate: true
 ---
 
 ![bg w:600](images/qrcode_110343917_173460ff51e1f3bbd8f56f3eb1b22090.png)
@@ -61,7 +62,7 @@ marp: true
 
 ---
 
-# 진행 계획
+# 진행 계획 <span style="background: orange">변경</span>
 <table>
   <tr>
     <th Rowspan=2>주요 내용</th>
@@ -104,8 +105,86 @@ marp: true
     <td></td>
     <td style="background: #C6D9F1; width: 30px"></td>
     <td style="background: #C6D9F1; width: 30px"></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>2개월</td>
+  </tr>
+    <tr>
+    <td>로그인과 서버 통신</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td style="background: #C6D9F1; width: 30px"></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>2주</td>
+  </tr>
+    </tr>
+    <tr>
+    <td>서버에 데이터 저장</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td style="background: #C6D9F1; width: 30px"></td>
+    <td style="width: 30px"></td>
+    <td style="width: 30px"></td>
+    <td>2주</td>
+  </tr>
+</table>
+
+---
+
+# 진행 계획 <span style="background: orange">변경</span>
+<table>
+  <tr>
+    <th Rowspan=2>주요 내용</th>
+    <th Colspan=8>추진 일정</th>
+    <th Rowspan=2>소요 기간</th>
+  </tr>
+  <tr>
+    <td Colspan=2>3</td>
+    <td Colspan=2>4</td>
+    <td Colspan=2>5</td>
+    <td Colspan=2>6</td>
+  </tr>
+  <tr>
+    <td>브레인 스토밍</td>
+    <td style="background: #C6D9F1; width: 30px"></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>2주</td>
+  </tr>
+  <tr>
+    <td>레이아웃과 기능 설계 및 역할분담</td>
+    <td></td>
+    <td style="background: #C6D9F1; width: 30px"></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>2주</td>
+  </tr>
+    <tr>
+    <td>기초 기능 개발</td>
+    <td></td>
+    <td></td>
     <td style="background: #C6D9F1; width: 30px"></td>
     <td style="background: #C6D9F1; width: 30px"></td>
+    <td style="background: orange; width: 30px"></td>
+    <td style="background: orange; width: 30px"></td>
     <td></td>
     <td></td>
     <td>2개월</td>
@@ -170,14 +249,6 @@ marp: true
 
 ---
 
-<div style="position: absolute; top: 10px; left: 50%; transform: translateX(-50%)"># [진행 계획] 레이아웃과 기능 설계</div>
-
-- 앞전에 했던 브레인 스토밍을 토대로, 각자 서로가 생각하는 기능과 레이아웃 디자인을 제작하여, 발표했습니다.
-- 그 중 선택된 디자인입니다.
-
-
----
-
 ![bg w:700](images/4[진행_계획]레이아웃_디자인_메모_관리창.PNG)
 
 ---
@@ -207,12 +278,10 @@ marp: true
 ---
 
 # [진행 계획] 기초 기능 개발
-- 개발 상황 (실제 앱 구동)
-- 선택한 기술들
-- Figma (image)
-- 핫 리로드 (gif)
+- Figma
+- 핫 리로드
 - SQLite3
-- ERD (image)
+- ERD
 
 ---
 
